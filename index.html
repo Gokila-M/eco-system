@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-System Awareness</title>
+  <link rel="shortcut icon" href="image/eco-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- nav-bar  -->
+  <section id="nav-bar" class="container">
+    <header class="nav-bar">
+      <div class="brand"><a href="#hero"><h1>Eco-System</h1></a></div>
+      <div class="nav-list">
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#tips">Tips</a></li>
+          <li><a href="#footer">Eco Quiz</a></li>
+        </ul>
+      </div>
+    </header>
+  </section>
+  <!-- End nav-bar  -->
+
+  <!-- Hero Section  -->
+  <section id="hero" class="hero container">
+    <div class="hero-info">
+      <h6 class="hero-info-heading">Eco-System Awareness</h6>
+      <p class="hero-info-subheading">Protecting our planet, preserving our future.</p>
+    </div>
+    <div class="hero-img">
+      <img src="./image/image-1.jpg" alt="Eco-System Image">
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+  <!-- About section  -->
+  <section id="about" class="about container">
+    <div class="about-info">
+      <h1 class="about-info-heading">About Us</h1>
+      <p class="about-info-desc">
+        At <strong>Eco-System Awareness</strong>, we aim to spread knowledge and inspire action to protect our natural environment. Together, we can create a sustainable future for generations to come.
+      </p>
+      <h2>Our Mission:</h2>
+      <ul>
+        <li>Promoting eco-friendly practices</li>
+        <li>Educating communities about biodiversity</li>
+        <li>Encouraging sustainable living habits</li>
+      </ul>
+      <h2>Contact Us</h2>
+      <p>Email: support@ecosystemawareness.com</p>
+      <p>Phone: +1 800 456 7890</p>
+    </div>
+    <div class="about-img">
+      <img src="image/image-2.jpg" alt="About Eco-System">
+    </div>
+  </section>
+  <!-- End About section  -->
+
+  <!-- Resources Section -->
+  <section id="resources" class="resources container">
+    <div class="resources-header">
+      <h1 class="resources-header-heading">Resources</h1>
+      <h2 class="resources-header-desc">Explore tools and guides to protect the environment</h2>
+    </div>
+    <div class="resources-info">
+      <div class="resource">
+        <div class="resource-card">
+          <div class="resource-front">
+            <i class="fas fa-leaf"></i>
+            <h1 class="resource-front-heading">Sustainable Living Tips</h1>
+          </div>
+          <div class="resource-back">
+            <h1 class="resource-back-heading">Go Green</h1>
+            <p class="resource-back-desc">
+              <a href="https://www.worldwildlife.org/pages/green-tips">Visit Resource</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="resource">
+        <div class="resource-card">
+          <div class="resource-front">
+            <i class="fas fa-tree"></i>
+            <h1 class="resource-front-heading">Plant Conservation</h1>
+          </div>
+          <div class="resource-back">
+            <h1 class="resource-back-heading">Learn More</h1>
+            <p class="resource-back-desc">
+              <a href="https://www.bgci.org/resources/plants/">Visit Resource</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="resource">
+        <div class="resource-card">
+          <div class="resource-front">
+            <i class="fas fa-water"></i>
+            <h1 class="resource-front-heading">Water Conservation</h1>
+          </div>
+          <div class="resource-back">
+            <h1 class="resource-back-heading">Save Water</h1>
+            <p class="resource-back-desc">
+              <a href="https://www.watercalculator.org/">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>   
+    </div>
+  </section>
+  <!-- End Resources Section -->
+
+  <!-- Tips section  -->
+  <section id="tips" class="tips container">
+    <div class="tips-img">
+      <img src="image/image-3.jpg" alt="Tips Image">
+    </div>
+    <div class="tips-content">
+      <h1 class="tips-heading">Eco-Friendly Tips</h1>
+      <p class="tip-item">Reduce, reuse, and recycle materials whenever possible.</p>
+      <p class="tip-item">Use energy-efficient appliances and light bulbs.</p>
+      <p class="tip-item">Plant trees to absorb CO2 and provide shade.</p>
+      <p class="tip-item">Use public transport or carpool to reduce emissions.</p>
+      <p class="tip-item">Avoid single-use plastics and opt for reusable alternatives.</p>
+      <p class="tip-item">Support local and sustainable businesses.</p>
+      <p class="tip-item">Conserve water by fixing leaks and turning off taps when not in use.</p>
+    </div>
+  </section>
+  <!-- End Tips section  -->
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h3>Your Ecosystem Awareness:</h3>
+      <p id="result-text"></p>
+    </div>
+  </div>
+  
+
+  <!-- Quiz Section -->
+  <footer id="footer" class="footer container">
+    <section id="quiz" class="quiz container">
+      <h2 class="section-heading">Eco-System Quiz</h2>
+      <form id="quizForm">
+        <div class="question">
+          <p class="question-text">How often do you recycle materials?</p>
+          <label><input type="radio" name="q1" value="good"> Always</label>
+          <label><input type="radio" name="q1" value="average"> Sometimes</label>
+          <label><input type="radio" name="q1" value="bad"> Rarely</label>
+        </div>
+        <div class="question">
+          <p class="question-text">Do you actively save water and electricity?</p>
+          <label><input type="radio" name="q2" value="good"> Yes</label>
+          <label><input type="radio" name="q2" value="average"> Occasionally</label>
+          <label><input type="radio" name="q2" value="bad"> No</label>
+        </div>
+        <div class="question">
+          <p class="question-text">Do you avoid using single-use plastics?</p>
+          <label><input type="radio" name="q3" value="good"> Always</label>
+          <label><input type="radio" name="q3" value="average"> Sometimes</label>
+          <label><input type="radio" name="q3" value="bad"> Rarely</label>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </section>
+  </footer>
+  <!-- End Quiz Section -->
+
+  <script src="app.js"></script>
+</body>
+</html>
