@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco System Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f2e9;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .products, .cart-page {
+            padding: 40px;
+        }
+
+        .cart-page {
+            display: none; /* Initially hide the cart */
+        }
+
+        .product-list, .cart-list {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .product, .cart-item {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+
+        .product img, .cart-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .cart-button, .remove-button {
+            
+            margin-top: 10px;
+            padding: 8px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-button { background: #ff9800;
+            transition: background 0.3s, transform 0.1s;
+        }
+        .cart-button:hover {
+    background: #e68900; /* Darker orange on hover */
+}
+
+
+.cart-button:active {
+    background: #cc7700; /* Even darker orange when clicked */
+    transform: scale(0.95); /* Slight shrink effect on click */
+}
+        .remove-button { background: #d9534f; }
+        button {
+    width: 86%;
+    padding: 10px;
+    background: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background: #45a049; /* Darker green on hover */
+}
+
+button:active {
+    background: #3d8b40; /* Even darker green when clicked */
+    transform: scale(0.95); /* Slight shrink effect */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Product Section -->
+    <div class="products" id="product-section">
+        <h2>Eco System Products</h2>
+        <button onclick="showCart()">Go to Cart Page</button>
+        <div class="product-list" id="product-list">
+            <div class="product" data-name="Eco-Friendly SOAP">
+                <img src="./images/pexels-gabby-k-1.jpg" alt="Eco-Friendly Soap">
+                <p>Eco-Friendly SOAP</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Wooden Spoons">
+                <img src="./images/pexels-karolina-grabowska-4397822.jpg" alt="Wooden Spoons">
+                <p>Wooden Spoons</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Paper-Cup">
+                <img src="./images/pexels-karolina-grabowska-4465829.jpg" alt="Paper-Cup">
+                <p>Paper-Cup</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="EGG"  >
+                <img src="./images/pexels-klaus-nielsen-6294242.jpg" alt="EGG">
+                <p>EGG</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="BAG"  >
+                <img src="./images/pexels-lara-jameson-9324370.jpg" alt="Soap">
+                <p>BAG</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Beauty-COSMATICS"  >
+                <img src="./images/pexels-laryssa-suaid-798122-3616980.jpg" alt="Bamboo Toothbrush">
+                <p>BEAUTY COSMATICS</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Beauty-SOAP"  >
+                <img src="./images/pexels-mikhail-nilov-7814881.jpg" alt="Bamboo Toothbrush">
+                <p>Beauty-SOAP</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="ANGERS"  >
+                <img src="./images/pexels-misolo-cosmetic-2588316-4841357.jpg" alt="Bamboo Toothbrush">
+                <p>ANGERS</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="GREENLEAF COSMATIC"  >
+                <img src="./images/pexels-n-voitkevich-7852639.jpg" alt="Bamboo Toothbrush">
+                <p>GREENLEAF COSMATIC</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="FRUITS"  >
+                <img src="./images/pexels-polina-kovaleva-5420489.jpg" alt="Bamboo Toothbrush">
+                <p>Bamboo Toothbrush</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="PASTE BRESH"  >
+                <img src="./images/pexels-polina-tankilevitch-3735152.jpg" alt="Bamboo Toothbrush">
+                <p>PASTE BRESH</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="FRUITS"  >
+                <img src="./images/pexels-sarah-chai-7262791.jpg" alt="Bamboo Toothbrush">
+                <p>FRUITS</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="PISTA"  >
+                <img src="./images/pexels-sarah-chai-7262792.jpg" alt="Bamboo Toothbrush">
+                <p>PISTA</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="BEETROOT"  >
+                <img src="./images/pexels-sarah-chai-7262982.jpg" alt="Bamboo Toothbrush">
+                <p>BEETROOT</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="WHITE BAG"  >
+                <img src="./images/pexels-su-ji-251768595-25533249.jpg" alt="Bamboo Toothbrush">
+                <p>WHITE BAG</p>
+                <button class="cart-button" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart-page" id="cart-section">
+        <h2>Your Cart</h2>
+        <button onclick="showProducts()">Back to Products</button>
+        <div class="cart-list" id="cart-list"></div>
+    </div>
+
+    <script>
+        function showCart() {
+            document.getElementById('product-section').style.display = 'none';
+            document.getElementById('cart-section').style.display = 'block';
+        }
+
+        function showProducts() {
+            document.getElementById('cart-section').style.display = 'none';
+            document.getElementById('product-section').style.display = 'block';
+        }
+
+        function addToCart(button) {
+            const product = button.parentElement;
+            const name = product.getAttribute("data-name");
+
+            const cartList = document.getElementById("cart-list");
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+            cartItem.innerHTML = `
+                <p>${name}</p>
+                <button class="remove-button" onclick="removeFromCart(this)">Remove</button>
+            `;
+            cartList.appendChild(cartItem);
+        }
+
+        function removeFromCart(button) {
+            button.parentElement.remove();
+        }
+    </script>
+
+</body>
+</html>
